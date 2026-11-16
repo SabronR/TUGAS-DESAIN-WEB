@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animasi Transisi & Keyframes CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border: 2px solid #212121;
+            margin: 50px auto;
+            -webkit-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+        @keyframes putarBaling {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes putarBaling {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        @media (orientation: landscape) {
+            .box {
+                width: 200px;
+                height: 100px;
+                background: blue; 
+                border-radius: 50%; 
+                
+                animation: putarBaling 2s linear infinite;
+                -webkit-animation: putarBaling 2s linear infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Transisi & Animasi CSS3</h3>
+    <div class="box"></div>
+    <p>
+        Ubah orientasi ke landscape/portrait (atau ubah ukuran jendela browser) untuk melihat efek transisi bentuk oval biru dan animasi berputar!
+    </p>
+</body>
+</html>
